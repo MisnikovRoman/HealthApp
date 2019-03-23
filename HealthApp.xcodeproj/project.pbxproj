@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		CE32BB76224636D400093CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB75224636D400093CC7 /* AppDelegate.swift */; };
-		CE32BB78224636D400093CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB77224636D400093CC7 /* ViewController.swift */; };
+		CE32BB78224636D400093CC7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB77224636D400093CC7 /* TestVC.swift */; };
 		CE32BB7B224636D400093CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB79224636D400093CC7 /* Main.storyboard */; };
 		CE32BB7D224636D500093CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB7C224636D500093CC7 /* Assets.xcassets */; };
 		CE32BB80224636D500093CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB7E224636D500093CC7 /* LaunchScreen.storyboard */; };
+		CE32BB8822463B9400093CC7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8722463B9400093CC7 /* Constant.swift */; };
+		CE32BB8C22464BDA00093CC7 /* MqttSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8B22464BDA00093CC7 /* MqttSensor.swift */; };
+		CE32BB8E22466ADD00093CC7 /* RightectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8D22466ADD00093CC7 /* RightectService.swift */; };
+		DA3E34259C82BC8D521AC660 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDFE2568F9598279DC9C72E /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		767D88A5EAB790B635FF88FD /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
+		7DDFE2568F9598279DC9C72E /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD70CA6A9EC54BDB14FC4FBA /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CE32BB72224636D400093CC7 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE32BB75224636D400093CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE32BB77224636D400093CC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE32BB77224636D400093CC7 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		CE32BB7A224636D400093CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE32BB7C224636D500093CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE32BB7F224636D500093CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE32BB81224636D500093CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE32BB8722463B9400093CC7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CE32BB8B22464BDA00093CC7 /* MqttSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttSensor.swift; sourceTree = "<group>"; };
+		CE32BB8D22466ADD00093CC7 /* RightectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightectService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3E34259C82BC8D521AC660 /* Pods_HealthApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6899117BBD3B33E86F636EB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD70CA6A9EC54BDB14FC4FBA /* Pods-HealthApp.debug.xcconfig */,
+				767D88A5EAB790B635FF88FD /* Pods-HealthApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC74BEED76DB723476A8F1D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DDFE2568F9598279DC9C72E /* Pods_HealthApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE32BB69224636D400093CC7 = {
 			isa = PBXGroup;
 			children = (
 				CE32BB74224636D400093CC7 /* HealthApp */,
 				CE32BB73224636D400093CC7 /* Products */,
+				6899117BBD3B33E86F636EB3 /* Pods */,
+				BC74BEED76DB723476A8F1D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +84,49 @@
 		CE32BB74224636D400093CC7 /* HealthApp */ = {
 			isa = PBXGroup;
 			children = (
-				CE32BB75224636D400093CC7 /* AppDelegate.swift */,
-				CE32BB77224636D400093CC7 /* ViewController.swift */,
-				CE32BB79224636D400093CC7 /* Main.storyboard */,
+				CE32BB902246705C00093CC7 /* Application */,
+				CE32BB8A22463D9E00093CC7 /* Modules */,
+				CE32BB8F2246705200093CC7 /* Services */,
+				CE32BB8922463D7D00093CC7 /* Supporting Files */,
+			);
+			path = HealthApp;
+			sourceTree = "<group>";
+		};
+		CE32BB8922463D7D00093CC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB8722463B9400093CC7 /* Constant.swift */,
 				CE32BB7C224636D500093CC7 /* Assets.xcassets */,
 				CE32BB7E224636D500093CC7 /* LaunchScreen.storyboard */,
 				CE32BB81224636D500093CC7 /* Info.plist */,
 			);
-			path = HealthApp;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE32BB8A22463D9E00093CC7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB77224636D400093CC7 /* TestVC.swift */,
+				CE32BB8B22464BDA00093CC7 /* MqttSensor.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE32BB8F2246705200093CC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB8D22466ADD00093CC7 /* RightectService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE32BB902246705C00093CC7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB75224636D400093CC7 /* AppDelegate.swift */,
+				CE32BB79224636D400093CC7 /* Main.storyboard */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE32BB84224636D500093CC7 /* Build configuration list for PBXNativeTarget "HealthApp" */;
 			buildPhases = (
+				3E64E78E6F4608848F8CB136 /* [CP] Check Pods Manifest.lock */,
 				CE32BB6E224636D400093CC7 /* Sources */,
 				CE32BB6F224636D400093CC7 /* Frameworks */,
 				CE32BB70224636D400093CC7 /* Resources */,
+				7DC731FA1A9CF7BA7B358866 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +197,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E64E78E6F4608848F8CB136 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DC731FA1A9CF7BA7B358866 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE32BB6E224636D400093CC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE32BB78224636D400093CC7 /* ViewController.swift in Sources */,
+				CE32BB78224636D400093CC7 /* TestVC.swift in Sources */,
 				CE32BB76224636D400093CC7 /* AppDelegate.swift in Sources */,
+				CE32BB8E22466ADD00093CC7 /* RightectService.swift in Sources */,
+				CE32BB8822463B9400093CC7 /* Constant.swift in Sources */,
+				CE32BB8C22464BDA00093CC7 /* MqttSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +399,12 @@
 		};
 		CE32BB85224636D500093CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD70CA6A9EC54BDB14FC4FBA /* Pods-HealthApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
-				INFOPLIST_FILE = HealthApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +418,12 @@
 		};
 		CE32BB86224636D500093CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 767D88A5EAB790B635FF88FD /* Pods-HealthApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
-				INFOPLIST_FILE = HealthApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
