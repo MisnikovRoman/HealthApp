@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CE32BB76224636D400093CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB75224636D400093CC7 /* AppDelegate.swift */; };
-		CE32BB78224636D400093CC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB77224636D400093CC7 /* ViewController.swift */; };
+		CE32BB78224636D400093CC7 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB77224636D400093CC7 /* TestVC.swift */; };
 		CE32BB7B224636D400093CC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB79224636D400093CC7 /* Main.storyboard */; };
 		CE32BB7D224636D500093CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB7C224636D500093CC7 /* Assets.xcassets */; };
 		CE32BB80224636D500093CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB7E224636D500093CC7 /* LaunchScreen.storyboard */; };
+		CE32BB8822463B9400093CC7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8722463B9400093CC7 /* Constant.swift */; };
 		DA3E34259C82BC8D521AC660 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDFE2568F9598279DC9C72E /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +22,12 @@
 		BD70CA6A9EC54BDB14FC4FBA /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CE32BB72224636D400093CC7 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE32BB75224636D400093CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE32BB77224636D400093CC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE32BB77224636D400093CC7 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		CE32BB7A224636D400093CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE32BB7C224636D500093CC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE32BB7F224636D500093CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE32BB81224636D500093CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE32BB8722463B9400093CC7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				CE32BB75224636D400093CC7 /* AppDelegate.swift */,
-				CE32BB77224636D400093CC7 /* ViewController.swift */,
+				CE32BB77224636D400093CC7 /* TestVC.swift */,
 				CE32BB79224636D400093CC7 /* Main.storyboard */,
 				CE32BB7C224636D500093CC7 /* Assets.xcassets */,
 				CE32BB7E224636D500093CC7 /* LaunchScreen.storyboard */,
 				CE32BB81224636D500093CC7 /* Info.plist */,
+				CE32BB8722463B9400093CC7 /* Constant.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -210,8 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE32BB78224636D400093CC7 /* ViewController.swift in Sources */,
+				CE32BB78224636D400093CC7 /* TestVC.swift in Sources */,
 				CE32BB76224636D400093CC7 /* AppDelegate.swift in Sources */,
+				CE32BB8822463B9400093CC7 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
