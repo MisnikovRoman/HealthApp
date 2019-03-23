@@ -21,6 +21,8 @@ struct RTObject {
 
 enum VC {
 	static let test = "TestVC"
+	static let tabBar = "TabBarController"
+	static let history = "HistoryVC"
 }
 
 enum API {
@@ -39,4 +41,9 @@ enum MQTT {
 enum MqttTopic {
 	static let enable = "/state/on"
 	static let heartRate = "/state/hr"
+}
+
+enum TabBarItem {
+	static let measure = "ЭКГ"
+	static let history = "История"
 }

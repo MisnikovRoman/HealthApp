@@ -11,10 +11,14 @@ import CocoaMQTT
 
 class TestVC: UIViewController {
 
+	@IBOutlet weak var heartRateLbl: UILabel!
+	@IBOutlet weak var heartLbl: BeatingLabel!
+
 	var mqttService: MqttService?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		mainSetup()
 		mqttService = RightechService(mqtt: createMQTT())
 		mqttService?.connect()
 		//mqttService?.subscribe(to: MqttTopic.heartRate)
@@ -22,20 +26,36 @@ class TestVC: UIViewController {
 
 	@IBAction func enable(_ sender: Any) {
 		mqttService?.publish(to: MqttTopic.enable, message: "on")
+		mqttService?.subscribe(to: MqttTopic.heartRate)
+		heartLbl.isHidden = false
+		heartLbl.startBeating()
 	}
 
 	@IBAction func disable(_ sender: Any) {
 		mqttService?.publish(to: MqttTopic.enable, message: "off")
+		heartLbl.stopBeating()
+		heartLbl.isHidden = true
+	}
+	@IBAction func setRandomHR(_ sender: Any) {
+		showHeartRate(value: Int.random(in: 50...83))
 	}
 }
 
 private extension TestVC {
+	func mainSetup() {
+		title = "Снятие ЭКГ"
+	}
+
 	func createMQTT() -> CocoaMQTT {
 		let mqtt = CocoaMQTT(clientID: MQTT.iphoneObject.clientID,
 						 host: MQTT.host,
 						 port: UInt16(MQTT.port))
 		mqtt.delegate = self
 		return mqtt
+	}
+
+	func showHeartRate(value: Int) {
+//		heartRateLbl.text = "\(value)"
 	}
 }
 
@@ -45,7 +65,7 @@ extension TestVC: CocoaMQTTDelegate {
 	}
 
 	func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
-		print("MQTT: receive pong")
+		print("MQTT: pong")
 	}
 
 	func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
@@ -65,7 +85,12 @@ extension TestVC: CocoaMQTTDelegate {
 	}
 
 	func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-		print("MQTT: received message \(message) with id: \(id)")
+		//print("MQTT: received message \(message) with id: \(id)")
+		guard message.topic == MqttTopic.heartRate else { return }
+		let heartRateString = message.string ?? "-1"
+		print("❤️", heartRateString)
+		showHeartRate(value: Int(heartRateString) ?? -1)
+
 	}
 
 	func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: String) {
