@@ -81,14 +81,30 @@
 			isa = PBXGroup;
 			children = (
 				CE32BB75224636D400093CC7 /* AppDelegate.swift */,
-				CE32BB77224636D400093CC7 /* TestVC.swift */,
 				CE32BB79224636D400093CC7 /* Main.storyboard */,
+				CE32BB8A22463D9E00093CC7 /* Modules */,
+				CE32BB8922463D7D00093CC7 /* Supporting Files */,
+			);
+			path = HealthApp;
+			sourceTree = "<group>";
+		};
+		CE32BB8922463D7D00093CC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB8722463B9400093CC7 /* Constant.swift */,
 				CE32BB7C224636D500093CC7 /* Assets.xcassets */,
 				CE32BB7E224636D500093CC7 /* LaunchScreen.storyboard */,
 				CE32BB81224636D500093CC7 /* Info.plist */,
-				CE32BB8722463B9400093CC7 /* Constant.swift */,
 			);
-			path = HealthApp;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE32BB8A22463D9E00093CC7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB77224636D400093CC7 /* TestVC.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,7 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
-				INFOPLIST_FILE = HealthApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJHX98NUDV;
-				INFOPLIST_FILE = HealthApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
