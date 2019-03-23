@@ -11,34 +11,31 @@ import CocoaMQTT
 
 class TestVC: UIViewController {
 
-	var mqtt: CocoaMQTT?
-
-	@IBOutlet weak var debugMsgLbl: UILabel!
+	var mqttService: MqttService?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		mqttService = RightechService(mqtt: createMQTT())
+		mqttService?.connect()
+		//mqttService?.subscribe(to: MqttTopic.heartRate)
 	}
 
-	@IBAction func test(_ sender: Any) {
-		
+	@IBAction func enable(_ sender: Any) {
+		mqttService?.publish(to: MqttTopic.enable, message: "on")
+	}
+
+	@IBAction func disable(_ sender: Any) {
+		mqttService?.publish(to: MqttTopic.enable, message: "off")
 	}
 }
 
 private extension TestVC {
-	func connectMQTT() {
-		let clientID = "CocoaMQTT-" + String(ProcessInfo().processIdentifier)
-		mqtt = CocoaMQTT(clientID: clientID, host: "localhost", port: 1883)
-		guard let mqtt = mqtt else {
-			assertionFailure("Не удалось создать MQTT объект")
-			return
-		}
-
-		mqtt.username = "test"
-		mqtt.password = "public"
-		mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
-		mqtt.keepAlive = 60
+	func createMQTT() -> CocoaMQTT {
+		let mqtt = CocoaMQTT(clientID: MQTT.iphoneObject.clientID,
+						 host: MQTT.host,
+						 port: UInt16(MQTT.port))
 		mqtt.delegate = self
-		mqtt.connect()
+		return mqtt
 	}
 }
 
@@ -52,7 +49,7 @@ extension TestVC: CocoaMQTTDelegate {
 	}
 
 	func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
-		print("MQTT: disconnect")
+		print("MQTT: disconnect with error: \(err?.localizedDescription ?? "...")")
 	}
 
 	func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {

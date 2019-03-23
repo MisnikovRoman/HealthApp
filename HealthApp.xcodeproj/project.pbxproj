@@ -13,6 +13,8 @@
 		CE32BB7D224636D500093CC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB7C224636D500093CC7 /* Assets.xcassets */; };
 		CE32BB80224636D500093CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32BB7E224636D500093CC7 /* LaunchScreen.storyboard */; };
 		CE32BB8822463B9400093CC7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8722463B9400093CC7 /* Constant.swift */; };
+		CE32BB8C22464BDA00093CC7 /* MqttSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8B22464BDA00093CC7 /* MqttSensor.swift */; };
+		CE32BB8E22466ADD00093CC7 /* RightectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32BB8D22466ADD00093CC7 /* RightectService.swift */; };
 		DA3E34259C82BC8D521AC660 /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDFE2568F9598279DC9C72E /* Pods_HealthApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		CE32BB7F224636D500093CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE32BB81224636D500093CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE32BB8722463B9400093CC7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CE32BB8B22464BDA00093CC7 /* MqttSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MqttSensor.swift; sourceTree = "<group>"; };
+		CE32BB8D22466ADD00093CC7 /* RightectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightectService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +84,9 @@
 		CE32BB74224636D400093CC7 /* HealthApp */ = {
 			isa = PBXGroup;
 			children = (
-				CE32BB75224636D400093CC7 /* AppDelegate.swift */,
-				CE32BB79224636D400093CC7 /* Main.storyboard */,
+				CE32BB902246705C00093CC7 /* Application */,
 				CE32BB8A22463D9E00093CC7 /* Modules */,
+				CE32BB8F2246705200093CC7 /* Services */,
 				CE32BB8922463D7D00093CC7 /* Supporting Files */,
 			);
 			path = HealthApp;
@@ -103,8 +107,26 @@
 			isa = PBXGroup;
 			children = (
 				CE32BB77224636D400093CC7 /* TestVC.swift */,
+				CE32BB8B22464BDA00093CC7 /* MqttSensor.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE32BB8F2246705200093CC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB8D22466ADD00093CC7 /* RightectService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE32BB902246705C00093CC7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE32BB75224636D400093CC7 /* AppDelegate.swift */,
+				CE32BB79224636D400093CC7 /* Main.storyboard */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +253,9 @@
 			files = (
 				CE32BB78224636D400093CC7 /* TestVC.swift in Sources */,
 				CE32BB76224636D400093CC7 /* AppDelegate.swift in Sources */,
+				CE32BB8E22466ADD00093CC7 /* RightectService.swift in Sources */,
 				CE32BB8822463B9400093CC7 /* Constant.swift in Sources */,
+				CE32BB8C22464BDA00093CC7 /* MqttSensor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
